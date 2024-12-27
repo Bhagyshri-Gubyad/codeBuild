@@ -1,18 +1,18 @@
 version: 0.2
 phases:
   install:
+    runtime-versions:
+      java: correcto11
+  pre_builds:
     commands:
-      - echo installign nginx
-      - sudo apt-get update -y
-      - sudo apt-get install nginx -y
+      echo nothing in prebuild phases:
   build:
     commands:
       - echo build started on `date`
-      # - sudo rm /var/www/html/index.html
-      - cp index.html /var/www/html
+      - mvn install
   post_build:
     commands:
-      - echo configuring nginx done
+      - echo build completed on `date`
 artifacts:
-    files:
-      - /var/www/html/index.html 
+  files:
+    - target/messageUtil-1.0.jar
