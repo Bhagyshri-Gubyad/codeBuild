@@ -3,7 +3,7 @@ phases:
   install:
     runtime-versions:
       java: correcto11
-  pre_builds:
+  pre_build:
     commands:
       echo nothing in prebuild phases
   build:
