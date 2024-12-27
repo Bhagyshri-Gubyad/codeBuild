@@ -5,7 +5,7 @@ phases:
       java: correcto11
   pre_builds:
     commands:
-      echo nothing in prebuild phases:
+      echo nothing in prebuild phases
   build:
     commands:
       - echo build started on `date`
